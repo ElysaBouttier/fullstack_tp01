@@ -1,1 +1,29 @@
-<p>animals-list works!</p>
+<p>Liste des animaux</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name   </th>
+      <td mat-cell *matCellDef="let element">{{element.name}}  </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Age   </th>
+      <td mat-cell *matCellDef="let element">{{element.age}}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef>Genre   </th>
+      <td mat-cell *matCellDef="let element">{{element.gender}}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

@@ -1,1 +1,34 @@
 <p>animals-details works!</p>
+<form [formGroup]="formGroup" (submit)="save()">
+    <mat-form-field>
+      <mat-label>
+        ID
+      </mat-label>
+      <input matInput name="id" formControlName="id" type="number" min="1" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>
+        Name
+      </mat-label>
+      <input matInput name="name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>
+          Age
+        </mat-label>
+        <input matInput name="age" formControlName="age" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>
+          Genre
+        </mat-label>
+        <input matInput name="gender" formControlName="gender" />
+      </mat-form-field>
+    <button mat-flat-button color="primary" type="submit">Submit</button>
+    <p *ngIf="formGroup.controls.id.errors?.min">
+      La valeur minimale pour ce champ est :
+      {{ formGroup.controls.id.errors?.min.min }}
+    </p>
+  </form>
+  
+  
