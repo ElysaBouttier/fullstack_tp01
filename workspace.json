@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "api-app": "apps/api-app",
+    "client-app": "apps/client-app",
+    "client-app-e2e": "apps/client-app-e2e"
+  }
+}
