@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { AnimalsComponent } from './animals/animals.component';
+import { AnimalsListComponent } from './animals/animals-list/animals-list.component';
+import { AnimalsDetailsComponent } from './animals/animals-details/animals-details.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AnimalsComponent, AnimalsListComponent, AnimalsDetailsComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot([routes], { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
